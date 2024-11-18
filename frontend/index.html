@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prolog Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="game-container">
+    <h1>Trivia Game</h1>
+    <div id="question-area">Loading question...</div>
+    <div id="options-container" class="options"></div>
+    <div class="streak-info">
+        <span id="current-streak">Current Streak: 0</span>
+        <span id="highest-streak">Highest Streak: 0</span>
+    </div>
+    <div id="game-over-overlay" class="game-over-overlay">
+        <div class="game-over-message">
+            <h2>Game Over!</h2>
+            <p>Your streak ended. Better luck next time!</p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

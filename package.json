@@ -1,0 +1,28 @@
+{
+  "name": "trivia-game",
+  "version": "1.0.0",
+  "description": "A trivia game with user authentication, admin dashboard, and leaderboard.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "concurrently \"node backend/server.js\" \"node backend/gatherData.js\"",
+    "install-dependencies": "npm install",
+    "web": "npm run install-dependencies && npm start",
+    "gather-data": "node backend/gatherData.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.5.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "html-entities": "^1.4.0",
+    "node-cron": "^3.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sparql-client-2": "^0.6.3",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
