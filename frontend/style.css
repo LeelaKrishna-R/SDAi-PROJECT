@@ -1,47 +1,101 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar h1 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+    color: #ffc107; /* Gold color */
+}
+
+.navbar h2 {
+    font-size: 18px;
+    margin: 5px 0 0;
+    font-style: italic;
+    color: #fff;
+}
+
+/* Game Container Styles */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .game-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    background: #f7f7f7;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
     text-align: center;
     animation: fadeIn 1s ease;
+    margin-top: 20px;
 }
 
-.question {
-    font-size: 20px;
-    margin-bottom: 15px;
+/* Question Text Styling */
+.question-area h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    background: #ffc107;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* Option Buttons Styling */
 .options button {
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 15px 30px;
+    margin: 12px;
     background: #6a0dad;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(106, 13, 173, 0.4);
 }
 
 .options button:hover {
-    transform: scale(1.05);
+    background: #8f94fb;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(143, 148, 251, 0.5);
 }
 
-.streak-info {
-    margin-top: 15px;
+.options button:active {
+    background: #5e0d99;
+    transform: scale(1);
+    box-shadow: 0px 4px 10px rgba(94, 13, 153, 0.2);
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    margin-top: 20px;
     font-size: 14px;
-    color: #333;
+    color: #fff;
 }
 
+.footer p {
+    margin: 0;
+}
+
+/* Game Over Overlay */
 .game-over-overlay {
     position: fixed;
     top: 0;
@@ -63,8 +117,27 @@ body {
 }
 
 .game-over-message {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #4e54c8;
+    font-size: 20px;
+}
+
+.game-over-message h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #dc3545;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
